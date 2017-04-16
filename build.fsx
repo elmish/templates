@@ -16,22 +16,11 @@ let yarn =
 
 // Directories
 let buildDir  = "./build/"
-
-let samplesInstalls  =
-        !! "samples/*/package.json"
-        ++ "samples/*/*/package.json"
  
 // Filesets
 let projects  =
-      !! "src/*/*.fsproj"
+      !! "src/*/*.proj"
 
-// Fable projects
-let fables  =
-      !! "samples/**/fableconfig.json"
-
-// Artifact packages
-let packages  =
-      !! "src/*/package.json"
 
 let dotnetcliVersion = "1.0.1"
 let mutable dotnetExePath = "dotnet"
@@ -109,27 +98,8 @@ Target "Install" (fun _ ->
     |> Seq.iter (fun s -> 
         let dir = IO.Path.GetDirectoryName s
         printf "Installing: %s\n" dir
-        Npm (fun p ->
-            { p with
-                NpmFilePath = yarn
-                Command = Install Standard
-                WorkingDirectory = dir
-            })
         runDotnet dir "restore"
     )
-)
-
-Target "InstallSamples" (fun _ ->
-    samplesInstalls
-    |> Seq.iter (fun s -> 
-                    let dir = IO.Path.GetDirectoryName s
-                    printf "Installing for samples: %s\n" dir
-                    Npm (fun p ->
-                        { p with
-                            NpmFilePath = yarn
-                            Command = Install Standard
-                            WorkingDirectory = dir
-                        }))
 )
 
 // Targets
@@ -141,35 +111,14 @@ Target "Build" (fun _ ->
     projects
     |> Seq.iter (fun s -> 
         let dir = IO.Path.GetDirectoryName s
-        runDotnet dir "build")
+        runDotnet dir "pack")
 )
-
-Target "Samples" (fun _ ->
-    fables
-    |> Seq.iter (fun s -> 
-                    let dir = IO.Path.GetDirectoryName s
-                    printf "Building: %s\n" dir
-                    Npm (fun p ->
-                        { p with
-                            NpmFilePath = yarn
-                            Command = Run "build"
-                            WorkingDirectory = dir
-                        }))
-)
-
-Target "All" ignore
 
 // Build order
 "Clean"
   ==> "InstallDotNetCore"
   ==> "Install"
   ==> "Build"
-
-"InstallSamples"
-  ==> "Samples"
-
-"All"
-  <== ["Build"; "Samples"]
   
 // start build
 RunTargetOrDefault "Build"
