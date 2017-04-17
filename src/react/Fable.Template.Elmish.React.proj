@@ -15,8 +15,16 @@
     <TargetFramework>netstandard1.0</TargetFramework>
     <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
   </PropertyGroup>
+  <PropertyGroup>
+    <ExcludeFromPackage>
+        Content/node_modules/**/*;
+        Content/public/bundle.js*;
+        Content/bin/**/*;
+        Content/obj/**/*;
+    </ExcludeFromPackage>
+</PropertyGroup>
   <ItemGroup>
-    <Content Include="Content/**/*" Exclude="Content/node_modules/**/*" >
+    <Content Include="Content/**/*" Exclude="$(ExcludeFromPackage)" >
         <PackagePath>Content\</PackagePath>
     </Content>
   </ItemGroup>
