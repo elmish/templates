@@ -10,7 +10,6 @@ open Fable.Import.Browser
 open Types
 open App.State
 open Global
-open Global.Helpers
 
 importAll "../sass/main.sass"
 
