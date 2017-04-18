@@ -5,8 +5,8 @@ type Page =
   | Counter
   | About
 
-let toHash =
-  function
+let toHash page =
+  match page with
   | About -> "#about"
   | Counter -> "#counter"
   | Home -> "#home"
