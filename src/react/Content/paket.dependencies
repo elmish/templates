@@ -1,0 +1,9 @@
+source https://nuget.org/api/v2
+
+nuget FSharp.Core
+# When updating Fable.Core, update also
+# dotnet-fable CLI tool in .fsproj
+nuget Fable.Core 1.0.0-narumi-917
+nuget Fable.Elmish.React
+nuget Fable.Elmish.Browser
+nuget Fable.Elmish.Debugger

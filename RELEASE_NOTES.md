@@ -1,3 +1,8 @@
+### 0.2.0
+
+* Use Paket to resolve Fable deps
+* Change `GroupIdentity` to prevent conflict with *Fable simple* template 
+
 ### 0.1.8
 
 * Simply `toHash` function. Remove `function` in favor of `match page with`
