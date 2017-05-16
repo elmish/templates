@@ -2,9 +2,9 @@
   <PropertyGroup>
     <Description>Simple elmish application using React as a renderer</Description>
     <Authors>Maxime Mangel</Authors>
-    <PackageProjectUrl>https://github.com/fable-compiler/fable-elmish</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/fable-compiler/fable-elmish/blob/master/LICENSE.md</PackageLicenseUrl>
-    <RepositoryUrl>https://github.com/fable-compiler/fable-elmish.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/fable-elmish/elmish</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/fable-elmish/elmish/blob/master/LICENSE.md</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/fable-elmish/fable-elmish.git</RepositoryUrl>
     <PackageTags>fable;template;fsharp</PackageTags>
     <NeutralLanguage>en-US</NeutralLanguage>
     <PackageType>Template</PackageType>
