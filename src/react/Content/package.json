@@ -12,8 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "babel-runtime": "^6.23.0",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "remotedev": "^0.2.7"
   },
   "devDependencies": {
@@ -21,13 +21,13 @@
     "babel-loader": "^7.0.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
-    "bulma": "^0.4.0",
-    "css-loader": "^0.28.0",
-    "fable-loader": "^1.0.0-narumi-909",
-    "node-sass": "^4.5.2",
-    "sass-loader": "^6.0.3",
-    "style-loader": "^0.16.1",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.2"
+    "bulma": "^0.4.1",
+    "css-loader": "^0.28.1",
+    "fable-loader": "^1.0.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
   }
 }

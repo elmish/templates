@@ -1,10 +1,14 @@
 var path = require("path");
 var webpack = require("webpack");
 
-var babelOptions = resolveBabelOptions({
+function resolve(filePath) {
+  return path.join(__dirname, filePath)
+}
+
+var babelOptions = {
   presets: [["es2015", { "modules": false }]],
   plugins: ["transform-runtime"]
-})
+};
 
 var isProduction = process.argv.indexOf("-p") >= 0;
 console.log("Bundling for " + (isProduction ? "production" : "development") + "...");
@@ -56,25 +60,3 @@ module.exports = {
     ]
   }
 };
-
-// UTILS ----------------
-
-function resolve(filePath) {
-  return path.join(__dirname, filePath)
-}
-
-// Resolve plugin paths to prevent errors with fable-core files
-// See: https://github.com/webpack/webpack/issues/1866#issuecomment-203590582
-function resolveBabelOptions(babelOptions) {
-  function res(isPreset) {
-    return function (option) {
-      return Array.isArray(option)
-        ? [require.resolve((isPreset ? "babel-preset-" : "babel-plugin-") + option[0]), option[1]]
-        : require.resolve((isPreset ? "babel-preset-" : "babel-plugin-") + option);
-    }
-  }
-  return Object.assign({}, babelOptions, {
-    presets: babelOptions.presets.map(res(true)),
-    plugins: babelOptions.plugins.map(res(false))
-  });
-}
