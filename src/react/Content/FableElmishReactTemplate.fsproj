@@ -3,8 +3,6 @@
     <TargetFramework>netstandard1.6</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <!-- Global to the app -->
-    <Compile Include="src/Global.fs" />
     <!-- Info -->
     <Compile Include="src/Info/View.fs" />
     <!-- Counter -->

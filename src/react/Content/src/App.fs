@@ -9,7 +9,6 @@ open Fable.Import
 open Fable.Import.Browser
 open Types
 open App.State
-open Global
 
 importAll "../sass/main.sass"
 
