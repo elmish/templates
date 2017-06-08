@@ -3,10 +3,10 @@ module Home.State
 open Elmish
 open Types
 
-let init () : Model * Cmd<Msg> =
-  "", []
+let init () : Model =
+    ""
 
-let update msg model : Model * Cmd<Msg> =
-  match msg with
-  | ChangeStr str ->
-      str, []
+let update msg model : Model =
+    match msg with
+    | ChangeStr str ->
+      str

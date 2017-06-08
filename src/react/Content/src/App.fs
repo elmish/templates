@@ -25,44 +25,46 @@ let menuItem label page currentPage =
           [ str label ] ]
 
 let menu currentPage =
-  aside
-    [ ClassName "menu" ]
-    [ p
-        [ ClassName "menu-label" ]
-        [ str "General" ]
-      ul
-        [ ClassName "menu-list" ]
-        [ menuItem "Home" Home currentPage
-          menuItem "Counter sample" Counter currentPage
-          menuItem "About" Page.About currentPage ] ]
+    aside
+      [ ClassName "menu" ]
+      [ p
+          [ ClassName "menu-label" ]
+          [ str "General" ]
+        ul
+          [ ClassName "menu-list" ]
+          [ menuItem "Home" Home currentPage
+            menuItem "Counter sample" Counter currentPage
+            menuItem "Counter list sample" CounterList currentPage
+            menuItem "About" Page.About currentPage ] ]
 
 let root model dispatch =
 
-  let pageHtml =
-    function
-    | Page.About -> Info.View.root
-    | Counter -> Counter.View.root model.counter (CounterMsg >> dispatch)
-    | Home -> Home.View.root model.home (HomeMsg >> dispatch)
+    let pageHtml =
+        function
+        | Page.About -> Info.View.root
+        | Counter -> Counter.View.root model.Counter (CounterMsg >> dispatch)
+        | CounterList -> CounterList.View.root model.CounterList (CounterListMsg >> dispatch)
+        | Home -> Home.View.root model.Home (HomeMsg >> dispatch)
 
-  div
-    []
-    [ div
-        [ ClassName "navbar-bg" ]
+    div
+        []
         [ div
-            [ ClassName "container" ]
-            [ Navbar.View.root ] ]
-      div
-        [ ClassName "section" ]
-        [ div
-            [ ClassName "container" ]
+            [ ClassName "navbar-bg" ]
             [ div
-                [ ClassName "columns" ]
+                [ ClassName "container" ]
+                [ Navbar.View.root ] ]
+          div
+            [ ClassName "section" ]
+            [ div
+                [ ClassName "container" ]
                 [ div
-                    [ ClassName "column is-3" ]
-                    [ menu model.currentPage ]
-                  div
-                    [ ClassName "column" ]
-                    [ pageHtml model.currentPage ] ] ] ] ]
+                    [ ClassName "columns" ]
+                    [ div
+                        [ ClassName "column is-3" ]
+                        [ menu model.CurrentPage ]
+                      div
+                        [ ClassName "column" ]
+                        [ pageHtml model.CurrentPage ] ] ] ] ]
 
 open Elmish.React
 open Elmish.Debug
