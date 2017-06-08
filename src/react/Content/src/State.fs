@@ -25,22 +25,14 @@ let init result =
     urlUpdate result (Home (Home.State.init()))
 
 let update msg (model:Model) =
-    match msg with
-    | CounterMsg msg ->
-        match model with
-        | Counter counter ->
-            let counter = Counter.State.update msg counter 
-            Counter counter, Cmd.none
-        | _ -> model, Cmd.none
-    | CounterListMsg msg ->
-        match model with
-        | CounterList counterList ->
-            let counterList = CounterList.State.update msg counterList
-            CounterList counterList, Cmd.none
-        | _ -> model, Cmd.none
-    | HomeMsg msg ->
-        match model with
-        | Home data ->
-            let data = Home.State.update msg data 
-            Home data, Cmd.none
-        | _ -> model, Cmd.none
+    match msg, model with
+    | CounterMsg msg, Counter counter ->
+        let counter = Counter.State.update msg counter 
+        Counter counter, Cmd.none
+    | CounterListMsg msg, CounterList counterList ->
+        let counterList = CounterList.State.update msg counterList
+        CounterList counterList, Cmd.none
+    | HomeMsg msg, Home data ->
+        let data = Home.State.update msg data 
+        Home data, Cmd.none
+    | _ -> model, Cmd.none
