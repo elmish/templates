@@ -1,3 +1,8 @@
+### 0.2.2
+
+* Update to Fable 1.0.8
+* Update npm packages to latest versions
+
 ### 0.2.0
 
 * Use Paket to resolve Fable deps
