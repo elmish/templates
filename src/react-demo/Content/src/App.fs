@@ -15,7 +15,7 @@ importAll "../sass/main.sass"
 open Fable.Helpers.React
 open Fable.Helpers.React.Props
 
-let menuItem label page currentPage =
+let menuItem label page currentPage=
     li
       [ ]
       [ a
@@ -31,12 +31,12 @@ let menu currentPage =
           [ str "General" ]
         ul
           [ ClassName "menu-list" ]
-          [ menuItem "Home" Home currentPage
-            menuItem "Counter sample" Counter currentPage
-            menuItem "Counter list sample" CounterList currentPage
+          [ menuItem "Home" Page.Home currentPage
+            menuItem "Counter sample" Page.Counter currentPage
+            menuItem "Counter list sample" Page.CounterList currentPage
             menuItem "About" Page.About currentPage ] ]
 
-let root model dispatch =
+let root (model: Model) dispatch =
 
     let pageHtml =
         function

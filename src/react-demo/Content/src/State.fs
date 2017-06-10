@@ -9,30 +9,37 @@ open Types
 let pageParser: Parser<Page->Page,Page> =
     oneOf [
       map About (s "about")
-      map (Counter (Counter.State.init())) (s "counter")
-      map (CounterList (CounterList.State.init())) (s "counterlist")
-      map (Home (Home.State.init())) (s "home")
+      map Counter (s "counter")
+      map CounterList (s "counterlist")
+      map Home (s "home")
     ]
+
 
 let urlUpdate (result: Option<Page>) model =
     match result with
     | None ->
         console.error("Error parsing url")
-        model,Navigation.modifyUrl (toHash model)
-    | Some page -> page, Cmd.none
+        model, Navigation.modifyUrl (toHash model.CurrentPage)
+
+    | Some page ->
+        { model with CurrentPage = page }, Cmd.none
 
 let init result =
-    urlUpdate result (Home (Home.State.init()))
+    urlUpdate result
+        { CurrentPage = Home
+          Counter = Counter.State.init()
+          CounterList = CounterList.State.init()
+          Home = Home.State.init() }
+
 
 let update msg (model:Model) =
-    match msg, model with
-    | CounterMsg msg, Counter counter ->
-        let counter = Counter.State.update msg counter 
-        Counter counter, Cmd.none
-    | CounterListMsg msg, CounterList counterList ->
-        let counterList = CounterList.State.update msg counterList
-        CounterList counterList, Cmd.none
-    | HomeMsg msg, Home data ->
-        let data = Home.State.update msg data 
-        Home data, Cmd.none
-    | _ -> model, Cmd.none
+    match msg with
+    | CounterMsg msg ->
+        let counter = Counter.State.update msg model.Counter
+        { model with Counter = counter }, Cmd.none
+    | CounterListMsg msg ->
+        let counterList = CounterList.State.update msg model.CounterList
+        { model with CounterList = counterList }, Cmd.none
+    | HomeMsg msg ->
+        let home = Home.State.update msg model.Home
+        { model with Home =  home }, Cmd.none

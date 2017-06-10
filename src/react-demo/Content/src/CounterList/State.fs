@@ -18,7 +18,7 @@ let update (msg:Msg) (model:Model) =
 
     | Modify (id, counterMsg) ->
         model
-        |> List.mapi (fun i counterModel -> 
+        |> List.mapi (fun i counterModel ->
             if i = id then
                 Counter.State.update counterMsg counterModel
             else
