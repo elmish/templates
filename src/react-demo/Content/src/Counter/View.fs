@@ -16,13 +16,11 @@ let simpleButton txt action dispatch =
 let root model dispatch =
     div
         [ ClassName "columns is-vcentered" ]
-        [ div [ ClassName "column" ] [ ]
-          div
-            [ ClassName "column is-narrow"
+        [ div
+            [ ClassName "column is-half is-offset-one-quarter"
               Style
                 [ CSSProp.Width "170px" ] ]
             [ str (sprintf "Counter value: %i" model) ]
           simpleButton "+1" Increment dispatch
           simpleButton "-1" Decrement dispatch
-          simpleButton "Reset" Reset dispatch
-          div [ ClassName "column" ] [ ] ]
+          simpleButton "Reset" Reset dispatch ]
