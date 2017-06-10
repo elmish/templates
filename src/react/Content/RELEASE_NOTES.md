@@ -1,3 +1,7 @@
+# 0.2.3-next
+
+* Move RELEASE_NOTES into template directory
+
 ### 0.2.2
 
 * Update to Fable 1.0.8
@@ -6,7 +10,7 @@
 ### 0.2.0
 
 * Use Paket to resolve Fable deps
-* Change `GroupIdentity` to prevent conflict with *Fable simple* template 
+* Change `GroupIdentity` to prevent conflict with *Fable simple* template
 
 ### 0.1.8
 
