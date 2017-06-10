@@ -1,0 +1,15 @@
+{
+  "author": "Maxime Mangel",
+  "classifications": [ "Fable", "Elmish", "React" ],
+  "name": "Fable.Elmish.React.Demo App",
+  "tags": {
+    "language": "F#",
+    "type": "project"
+  },
+  "identity": "Fable.Template.Elmish.React.Demo",
+  "groupIdentity": "FableElmishReactDemo",
+  "shortName": "fable-elmish-react-demo",
+  "sourceName": "FableElmishReactDemoTemplate",
+  // This allows using the `-n` option to create a new directory
+  "preferNameDirectory": true
+}
