@@ -1,6 +1,7 @@
-# 0.2.3-next
+### 0.2.3
 
 * Move RELEASE_NOTES into template directory
+* Fix #12: Could not download FSharp.Core 4.2
 
 ### 0.2.2
 
