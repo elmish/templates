@@ -28,6 +28,6 @@ yarn install
 # Install dotnet dependencies
 dotnet restore
 # Start Fable server and Webpack dev server
-dotnet fable npm-run start
+dotnet fable shell-run 'yarn start'
 # In your browser, open: http://localhost:8080/
 ```
