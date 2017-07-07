@@ -1,3 +1,12 @@
+### 0.1.3
+
+* Use dotnet-fable as clitool
+* Fix Navbar display
+
+### 0.1.2
+
+* Update paket to latest version
+
 ### 0.1.1
 
 * Update Fable to 1.1.3

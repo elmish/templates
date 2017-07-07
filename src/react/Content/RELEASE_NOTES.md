@@ -1,3 +1,12 @@
+### 0.1.3
+
+* Use dotnet-fable as clitool
+* Fix Navbar display
+
+### 0.2.4
+
+* Update paket to latest version
+
 ### 0.2.3
 
 * Move RELEASE_NOTES into template directory
