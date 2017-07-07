@@ -2,6 +2,7 @@
 
 * Use dotnet-fable as clitool
 * Fix Navbar display
+* Fix #15: Prevent template engine to process paket files
 
 ### 0.2.4
 
