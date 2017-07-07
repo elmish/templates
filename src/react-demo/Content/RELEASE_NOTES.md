@@ -3,6 +3,7 @@
 * Use dotnet-fable as clitool
 * Fix Navbar display
 * Fix #15: Prevent template engine to process paket files
+* Do not emit: //+:cnd in App.fs
 
 ### 0.1.2
 
