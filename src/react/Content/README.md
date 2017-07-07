@@ -7,19 +7,15 @@ You can find more templates by searching `Fable.Template` packages in [Nuget](ht
 
 * [dotnet SDK](https://www.microsoft.com/net/download/core) 1.0.4 or higher
 * [node.js](https://nodejs.org) 4.8.2 or higher
-* A JS package manager: [yarn](https://yarnpkg.com) or [npm](http://npmjs.com/)
-
-> npm comes bundled with node.js, but we recommend to use at least npm 5. If you have npm installed you can upgrade it by running `npm install -g npm`.
+* [yarn](https://yarnpkg.com): JS package manager
 
 Although is not a Fable requirement, on macOS and Linux you'll need [Mono](http://www.mono-project.com/) for other F# tooling like Paket or editor support.
 
 ## Building and running the app
 
-> In the commands below, yarn is the tool of choice. If you want to use npm, just replace `yarn` by `npm` in the commands.
-
 1. Install JS dependencies: `yarn install`
 2. Install F# dependencies: `dotnet restore`
-3. Start Fable daemon and [Webpack](https://webpack.js.org/) dev server: `dotnet fable yarn-run start`
+3. Start Fable daemon and [Webpack](https://webpack.js.org/) dev server: `dotnet fable yarn-start`
 4. In your browser, open: http://localhost:8080/
 
 Any modification you do to the F# code will be reflected in the web page after saving.
@@ -37,13 +33,12 @@ Any modification you do to the F# code will be reflected in the web page after s
 
 > Paket dependencies will be installed in the `packages` directory. See [Paket website](https://fsprojects.github.io/Paket/) for more info.
 
-### yarn/npm
+### yarn
 
 - **package.json**: contains the JS dependencies together with other info, like development scripts.
 - **yarn.lock**: is the lock file created by yarn.
-- **package-lock.json**: is the lock file understood by npm 5, if you use it instead of yarn.
 
-> JS dependencies will be installed in `node_modules`. See [yarn](https://yarnpkg.com) and/or [npm](http://npmjs.com/) websites for more info.
+> JS dependencies will be installed in `node_modules`. See [yarn](https://yarnpkg.com) website for more info.
 
 ### Webpack
 
