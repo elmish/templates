@@ -1,3 +1,9 @@
+### 0.1.4
+
+* Include user choice between npm5 and yarn
+* Fix viewport (eg: for mobile)
+* Update dependencies to latest version
+
 ### 0.1.3
 
 * Use dotnet-fable as clitool

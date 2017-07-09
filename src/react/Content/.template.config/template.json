@@ -1,11 +1,41 @@
 {
   "author": "Maxime Mangel",
-  "classifications": [ "Fable", "Elmish", "React" ],
+  "classifications": [
+    "Fable",
+    "Elmish",
+    "React"
+  ],
   "name": "Fable.Elmish.React App",
   "tags": {
     "language": "F#",
     "type": "project"
   },
+  "symbols": {
+    "yarn": {
+      "type": "parameter",
+      "dataType": "bool",
+      "defaultValue": "false",
+      "description": "If set then, the template will be configure to use yarn."
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!yarn)",
+          "exclude": [
+            "yarn.lock"
+          ]
+        },
+        {
+          "condition": "(yarn)",
+          "exclude": [
+            "package-lock.json"
+          ]
+        }
+      ]
+    }
+  ],
   "identity": "Fable.Template.Elmish.React",
   "groupIdentity": "FableElmishReact",
   "shortName": "fable-elmish-react",

@@ -7,15 +7,26 @@ You can find more templates by searching `Fable.Template` packages in [Nuget](ht
 
 * [dotnet SDK](https://www.microsoft.com/net/download/core) 1.0.4 or higher
 * [node.js](https://nodejs.org) 4.8.2 or higher
+//#if (yarn)
 * [yarn](https://yarnpkg.com): JS package manager
-
+//#else
+* npm5: JS package manager
+//#endif
 Although is not a Fable requirement, on macOS and Linux you'll need [Mono](http://www.mono-project.com/) for other F# tooling like Paket or editor support.
 
 ## Building and running the app
 
+//#if (yarn)
 1. Install JS dependencies: `yarn install`
+//#else
+1. Install JS dependencies: `npm install`
+//#endif
 2. Install F# dependencies: `dotnet restore`
+//#if (yarn)
 3. Start Fable daemon and [Webpack](https://webpack.js.org/) dev server: `dotnet fable yarn-start`
+//#else
+3. Start Fable daemon and [Webpack](https://webpack.js.org/) dev server: `dotnet fable npm-start`
+//#endif
 4. In your browser, open: http://localhost:8080/
 
 Any modification you do to the F# code will be reflected in the web page after saving.
@@ -33,12 +44,21 @@ Any modification you do to the F# code will be reflected in the web page after s
 
 > Paket dependencies will be installed in the `packages` directory. See [Paket website](https://fsprojects.github.io/Paket/) for more info.
 
+//#if (yarn)
 ### yarn
 
 - **package.json**: contains the JS dependencies together with other info, like development scripts.
 - **yarn.lock**: is the lock file created by yarn.
 
 > JS dependencies will be installed in `node_modules`. See [yarn](https://yarnpkg.com) website for more info.
+//#else
+### npm
+
+- **package.json**: contains the JS dependencies together with other info, like development scripts.
+- **package-lock.json**: is the lock file created by npm5.
+
+> JS dependencies will be installed in `node_modules`. See [npm](https://www.npmjs.com/) website for more info.
+//#endif
 
 ### Webpack
 
