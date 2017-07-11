@@ -15,7 +15,7 @@ console.log("Bundling for " + (isProduction ? "production" : "development") + ".
 
 module.exports = {
   devtool: "source-map",
-  entry: resolve('./FableElmishReactTemplate.fsproj'),
+  entry: resolve('./src/FableElmishReactTemplate.fsproj'),
   output: {
     filename: 'bundle.js',
     path: resolve('./public'),
