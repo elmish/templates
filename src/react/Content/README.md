@@ -12,24 +12,46 @@ You can find more templates by searching `Fable.Template` packages in [Nuget](ht
 //#else
 * npm5: JS package manager
 //#endif
+
 Although is not a Fable requirement, on macOS and Linux you'll need [Mono](http://www.mono-project.com/) for other F# tooling like Paket or editor support.
+
+## Editor
+
+The project can be used by editors compatible with the new .fsproj format, like VS Code + [Ionide](http://ionide.io/), Emacs with [fsharp-mode](https://github.com/fsharp/emacs-fsharp-mode) or [Rider](https://www.jetbrains.com/rider/). **Visual Studio for Mac** is also compatible but in the current version the package auto-restore function conflicts with Paket so you need to disable it: `Preferences > Nuget > General`.
+
+## Installing the template
+
+In a terminal, run `dotnet new -i Fable.Template.Elmish.React::*` to install or update the template to latest version.
+
+> In some shells you many need quotations: `dotnet new -i "Fable.Template.Elmish.React::*"`. If you use dotnet SDK 2, you should only need to type `dotnet new -i Fable.Template.Elmish.React`.
+
+## Creating a new project with the template
+
+In a terminal, run `dotnet new fable` to create a project in the current directory. Type `dotnet new fable -n MyApp` instead to create a subfolder named `MyApp` and put the new project there.
+
+> The project will have the name of the directory. You may get some issues if the directory name contains some special characters like hyphens
 
 ## Building and running the app
 
 //#if (yarn)
-1. Install JS dependencies: `yarn install`
+* Install JS dependencies: `yarn install`
 //#else
-1. Install JS dependencies: `npm install`
+* Install JS dependencies: `npm install`
 //#endif
-2. Install F# dependencies: `dotnet restore`
+* **Move to `src` folder**: `cd src`
+* Install F# dependencies: `dotnet restore`
 //#if (yarn)
-3. Start Fable daemon and [Webpack](https://webpack.js.org/) dev server: `dotnet fable yarn-start`
+* Start Fable daemon and [Webpack](https://webpack.js.org/) dev server: `dotnet fable yarn-start`
 //#else
-3. Start Fable daemon and [Webpack](https://webpack.js.org/) dev server: `dotnet fable npm-start`
+* Start Fable daemon and [Webpack](https://webpack.js.org/) dev server: `dotnet fable npm-start`
 //#endif
-4. In your browser, open: http://localhost:8080/
+* In your browser, open: http://localhost:8080/
 
-Any modification you do to the F# code will be reflected in the web page after saving.
+> `dotnet fable yarn-start` (or `npm-start`) is used to start the Fable daemon and run a script in package.json concurrently. It's a shortcut of `yarn-run [SCRIP_NAME]`, e.g. `dotnet fable yarn-run start`.
+
+If you are using VS Code + [Ionide](http://ionide.io/), you can also use the key combination: Ctrl+Shift+B (Cmd+Shift+B on macOS) instead of typing the `dotnet fable yarn-start` command. This also has the advantage that Fable-specific errors will be highlighted in the editor along with other F# errors.
+
+Any modification you do to the F# code will be reflected in the web page after saving. When you want to output the JS code to disk, run `dotnet fable yarn-build` (or `npm-build`) and you'll get a minified JS bundle in the `public` folder.
 
 ## Project structure
 
@@ -68,4 +90,4 @@ Any modification you do to the F# code will be reflected in the web page after s
 
 ### F# source files
 
-The template only contains two F# source files: the project (.fsproj) and a source file (.fs) in `src` folder. Note Fable is a local dotnet CLI tool that is downloaded by the project file.
+The template only contains two F# source files: the project (.fsproj) and a source file (.fs) in `src` folder.
