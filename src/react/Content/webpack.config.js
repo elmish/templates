@@ -7,7 +7,13 @@ function resolve(filePath) {
 
 var babelOptions = {
   presets: [["es2015", { "modules": false }]],
-  plugins: ["transform-runtime"]
+  plugins: [["transform-runtime", {
+    "helpers": true,
+    // We don't need the polyfills as we're already calling
+    // cdn.polyfill.io/v2/polyfill.js in index.html
+    "polyfill": false,
+    "regenerator": false
+  }]]
 };
 
 var isProduction = process.argv.indexOf("-p") >= 0;
