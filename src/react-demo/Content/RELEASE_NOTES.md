@@ -1,13 +1,11 @@
-### 0.1.5
-
-* Move project file to src
-* Update to latest deps version. Ex Webpack 3
-
 ### 0.1.4
 
 * Include user choice between npm5 and yarn
 * Fix viewport (eg: for mobile)
 * Update dependencies to latest version
+* Better documention in the README.md
+* Webpack 3
+* Move project file into src
 
 ### 0.1.3
 

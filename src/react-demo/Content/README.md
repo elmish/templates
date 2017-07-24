@@ -5,7 +5,7 @@
 1. Install npm dependencies: `npm install`
 //#endif
 2. Install dotnet dependencies: `dotnet restore`
-3. Move into the `src` directory: `cd`src
+3. **Move to `src` folder**: `cd src`
 //#if (yarn)
 4. Start Fable server and Webpack dev server: `dotnet fable yarn-start`
 //#else
