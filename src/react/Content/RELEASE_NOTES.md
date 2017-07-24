@@ -1,4 +1,13 @@
-### 0.1.3
+### 0.2.6
+
+* Include user choice between npm5 and yarn
+* Fix viewport (eg: for mobile)
+* Update dependencies to latest version
+* Better documention in the README.md
+* Webpack 3
+* Move project file into src
+
+### 0.2.5
 
 * Use dotnet-fable as clitool
 * Fix Navbar display
