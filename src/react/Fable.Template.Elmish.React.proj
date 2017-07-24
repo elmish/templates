@@ -22,6 +22,8 @@
         Content/public/bundle.js*;
         Content/bin/**/*;
         Content/obj/**/*;
+        Content/src/bin/**/*;
+        Content/src/obj/**/*;
     </ExcludeFromPackage>
 </PropertyGroup>
   <ItemGroup>

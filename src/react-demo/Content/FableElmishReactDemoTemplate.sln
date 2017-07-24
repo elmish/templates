@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{46c7f31a-a5d9-4a55-bd50-afeea5e40ebc}") = "FableElmishReactDemoTemplate", "src/FableElmishReactDemoTemplate.fsproj", "{46c7f31a-a5d9-4a55-bd50-afeea5e40ebc}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46c7f31a-a5d9-4a55-bd50-afeea5e40ebc}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46c7f31a-a5d9-4a55-bd50-afeea5e40ebc}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46c7f31a-a5d9-4a55-bd50-afeea5e40ebc}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46c7f31a-a5d9-4a55-bd50-afeea5e40ebc}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

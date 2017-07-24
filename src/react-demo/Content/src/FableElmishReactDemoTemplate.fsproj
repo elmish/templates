@@ -1,0 +1,28 @@
+<Project Sdk="FSharp.NET.Sdk;Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- Info -->
+    <Compile Include="Info/View.fs" />
+    <!-- Counter -->
+    <Compile Include="Counter/Types.fs" />
+    <Compile Include="Counter/State.fs" />
+    <Compile Include="Counter/View.fs" />
+    <!-- CounterList -->
+    <Compile Include="CounterList/Types.fs" />
+    <Compile Include="CounterList/State.fs" />
+    <Compile Include="CounterList/View.fs" />
+    <!-- Home -->
+    <Compile Include="Home/Types.fs" />
+    <Compile Include="Home/State.fs" />
+    <Compile Include="Home/View.fs" />
+    <!-- Navbar -->
+    <Compile Include="Navbar/View.fs" />
+    <!-- App -->
+    <Compile Include="Types.fs" />
+    <Compile Include="State.fs" />
+    <Compile Include="App.fs" />
+  </ItemGroup>
+  <Import Project="..\.paket\Paket.Restore.targets" />
+</Project>
