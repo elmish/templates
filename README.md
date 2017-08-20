@@ -27,6 +27,8 @@ cd awesome
 yarn install
 # Install dotnet dependencies
 dotnet restore
+# Move into the source directory
+cd src
 # Start Fable server and Webpack dev server
 dotnet fable yarn-run start
 # In your browser, open: http://localhost:8080/
