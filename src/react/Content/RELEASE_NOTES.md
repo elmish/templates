@@ -1,3 +1,7 @@
+### 0.3.1
+
+* Fix dotnet version in README
+
 ### 0.3.0
 
 * Go to netstandard2.0
