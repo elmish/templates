@@ -19,12 +19,17 @@ dotnet new -i Fable.Template.Elmish.React::*
 dotnet new -i Fable.Template.Elmish.React
 
 # Create a project called "awesome" using the Short Name of the template
+# If you want to use yarn instead of npm add --yarn at the end of the command
 dotnet new fable-elmish-react -n awesome
+
 
 # Move into your new project directory
 cd awesome
 # Install npm dependencies
+# If you choose to use yarn
 yarn install
+# If you choose to use npm
+npm install
 # Install dotnet dependencies
 dotnet restore
 # Move into the source directory

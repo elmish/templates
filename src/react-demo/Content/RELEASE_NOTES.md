@@ -1,3 +1,8 @@
+### 0.2.0
+
+* Go to netstandard2.0
+* Updates all deps (.Net & JS)
+
 ### 0.1.4
 
 * Include user choice between npm5 and yarn
