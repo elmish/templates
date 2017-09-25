@@ -25,6 +25,7 @@ dotnet new fable-elmish-react -n awesome
 # Move into your new project directory
 cd awesome
 ```
+
 ## If you choose to use yarn
 ```bash
 # Install yarn dependencies
@@ -35,7 +36,9 @@ dotnet restore
 cd src
 # Start Fable server and Webpack dev server
 dotnet fable yarn-start
+# In your browser, open: http://localhost:8080/
 ```
+
 ## If you choose to use npm
 ```bash
 # Install npm dependencies
