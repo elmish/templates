@@ -22,19 +22,29 @@ dotnet new -i Fable.Template.Elmish.React
 # If you want to use yarn instead of npm add --yarn at the end of the command
 dotnet new fable-elmish-react -n awesome
 
-
 # Move into your new project directory
 cd awesome
-# Install npm dependencies
-# If you choose to use yarn
+```
+## If you choose to use yarn
+```bash
+# Install yarn dependencies
 yarn install
-# If you choose to use npm
+# Install dotnet dependencies
+dotnet restore
+# Move into the source directory
+cd src
+# Start Fable server and Webpack dev server
+dotnet fable yarn-start
+```
+## If you choose to use npm
+```bash
+# Install npm dependencies
 npm install
 # Install dotnet dependencies
 dotnet restore
 # Move into the source directory
 cd src
 # Start Fable server and Webpack dev server
-dotnet fable yarn-run start
+dotnet fable npm-start
 # In your browser, open: http://localhost:8080/
 ```
