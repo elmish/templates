@@ -1,3 +1,7 @@
+### 0.2.1
+
+* Fix #30: Upgrade dependencies, use Fable.React 1.2.0
+
 ### 0.2.0
 
 * Go to netstandard2.0

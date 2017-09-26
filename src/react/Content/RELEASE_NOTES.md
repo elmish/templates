@@ -1,3 +1,7 @@
+### 0.3.2
+
+* Fix #30: Upgrade dependencies, use Fable.React 1.2.0
+
 ### 0.3.1
 
 * Fix dotnet version in README
