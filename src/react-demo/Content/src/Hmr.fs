@@ -48,7 +48,7 @@ module Program =
               UserModel = model }, cmd
 
         let init =
-            if isNull (hmrState) then
+            if isNull hmrState then
                 program.init >> map >> createModel
             else
                 (fun _ -> unbox<HMRModel<_>> hmrState, Cmd.ofMsg Reload )
