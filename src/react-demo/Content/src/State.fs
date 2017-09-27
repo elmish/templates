@@ -19,7 +19,7 @@ let pageParser: Parser<Page->Page,Page> =
 let urlUpdate (result: Option<Page>) model =
     match result with
     | None ->
-        Browser.console.error("Error parsing url")
+        Browser.console.error("Error parsing url: " + Browser.window.location.href)
         model, Navigation.modifyUrl (toHash model.CurrentPage)
 
     | Some page ->
