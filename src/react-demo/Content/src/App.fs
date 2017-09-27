@@ -67,14 +67,16 @@ let root (model: Model) dispatch =
 
 open Elmish.React
 open Elmish.Debug
+open Hmr
 
 // App
 Program.mkProgram init update root
 |> Program.toNavigable (parseHash pageParser) urlUpdate
-|> Program.withReact "elmish-app"
 //-:cnd:noEmit
 #if DEBUG
 |> Program.withDebugger
+|> Program.withHMR
 #endif
 //+:cnd:noEmit
+|> Program.withReact "elmish-app"
 |> Program.run
