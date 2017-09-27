@@ -1,15 +1,8 @@
 module Hmr
 
 open Elmish
-open Elmish.Browser.Navigation
-open Elmish.Browser.UrlParser
 open Fable.Core
 open Fable.Core.JsInterop
-open Fable.Import
-open Fable.Import.Browser
-open App.State
-open Fable.Helpers.React
-open Fable.Helpers.React.Props
 
 module Program =
 
