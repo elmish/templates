@@ -30,10 +30,10 @@ cd awesome
 ```bash
 # Install yarn dependencies
 yarn install
-# Install dotnet dependencies
-dotnet restore
 # Move into the source directory
 cd src
+# Install dotnet dependencies
+dotnet restore
 # Start Fable server and Webpack dev server
 dotnet fable yarn-start
 # In your browser, open: http://localhost:8080/
@@ -43,10 +43,10 @@ dotnet fable yarn-start
 ```bash
 # Install npm dependencies
 npm install
-# Install dotnet dependencies
-dotnet restore
 # Move into the source directory
 cd src
+# Install dotnet dependencies
+dotnet restore
 # Start Fable server and Webpack dev server
 dotnet fable npm-start
 # In your browser, open: http://localhost:8080/
