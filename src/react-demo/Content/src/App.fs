@@ -67,7 +67,7 @@ let root (model: Model) dispatch =
 
 open Elmish.React
 open Elmish.Debug
-open Hmr
+open Elmish.HMR
 
 // App
 Program.mkProgram init update root
