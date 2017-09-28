@@ -25,7 +25,7 @@ module.exports = {
     entry: resolve('./src/FableElmishReactDemoTemplate.fsproj'),
     output: {
         filename: 'bundle.js',
-        path: resolve('/public')
+        path: resolve('./public')
     },
     resolve: {
         modules: [
