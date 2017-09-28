@@ -11,6 +11,8 @@ This repository contains the following templates:
 
 ## How to use ?
 
+:warning: You can't use `.` or `-` in your project name. We are already tracking [this issue](https://github.com/fable-elmish/templates/issues/7) and wait for a fix in [dotnet template](https://github.com/dotnet/templating/issues/402) :warning:
+
 ```bash
 # First we install the template using the is Name
 # For dotnet 1.x
