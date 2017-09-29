@@ -7,5 +7,6 @@ nuget Fable.Core
 nuget Fable.Elmish.React
 nuget Fable.Elmish.Browser
 nuget Fable.Elmish.Debugger
+nuget Fable.Elmish.HMR prerelease
 
 clitool dotnet-fable
