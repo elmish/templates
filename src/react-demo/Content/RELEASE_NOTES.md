@@ -1,3 +1,7 @@
+### 0.2.3
+
+* Use Fable.Elmish.HMR 1.0.0
+
 ### 0.2.2
 
 * Add Fable.Elmish.HMR
