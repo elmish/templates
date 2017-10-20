@@ -41,6 +41,9 @@ dotnet fable yarn-start
 # In your browser, open: http://localhost:8080/
 ```
 
+Note that yarn may emit a warning ``info fsevents@1.1.2: The platform "win32" is incompatible with this module``.  
+You can safely ignore this.
+
 ## If you choose to use npm
 ```bash
 # Install npm dependencies
