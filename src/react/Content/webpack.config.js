@@ -21,7 +21,7 @@ var isProduction = process.argv.indexOf("-p") >= 0;
 console.log("Bundling for " + (isProduction ? "production" : "development") + "...");
 
 module.exports = {
-    devtool: "source-map",
+    devtool: isProduction ? undefined : "source-map",
     entry: resolve('./src/FableElmishReactTemplate.fsproj'),
     output: {
         filename: 'bundle.js',
