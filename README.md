@@ -11,6 +11,8 @@ This repository contains the following templates:
 
 ## How to use ?
 
+:warning: You can't use `.` or `-` in your project name. We are already tracking [this issue](https://github.com/fable-elmish/templates/issues/7) and wait for a fix in [dotnet template](https://github.com/dotnet/templating/issues/402) :warning:
+
 ```bash
 # First we install the template using the is Name
 # For dotnet 1.x
@@ -22,19 +24,35 @@ dotnet new -i Fable.Template.Elmish.React
 # If you want to use yarn instead of npm add --yarn at the end of the command
 dotnet new fable-elmish-react -n awesome
 
-
 # Move into your new project directory
 cd awesome
-# Install npm dependencies
-# If you choose to use yarn
+```
+
+## If you choose to use yarn
+```bash
+# Install yarn dependencies
 yarn install
-# If you choose to use npm
-npm install
-# Install dotnet dependencies
-dotnet restore
 # Move into the source directory
 cd src
+# Install dotnet dependencies
+dotnet restore
 # Start Fable server and Webpack dev server
-dotnet fable yarn-run start
+dotnet fable yarn-start
+# In your browser, open: http://localhost:8080/
+```
+
+Note that yarn may emit a warning ``info fsevents@1.1.2: The platform "win32" is incompatible with this module``.  
+You can safely ignore this.
+
+## If you choose to use npm
+```bash
+# Install npm dependencies
+npm install
+# Move into the source directory
+cd src
+# Install dotnet dependencies
+dotnet restore
+# Start Fable server and Webpack dev server
+dotnet fable npm-start
 # In your browser, open: http://localhost:8080/
 ```

@@ -9,7 +9,7 @@
 npm-debug.log
 samples/**/public
 
-.vscode/
+/.vscode/
 
 # F#
 .fake/

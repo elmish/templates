@@ -3,7 +3,7 @@ module App.State
 open Elmish
 open Elmish.Browser.Navigation
 open Elmish.Browser.UrlParser
-open Fable.Import.Browser
+open Fable.Import
 open Types
 
 let pageParser: Parser<Page->Page,Page> =
@@ -12,13 +12,14 @@ let pageParser: Parser<Page->Page,Page> =
       map Counter (s "counter")
       map CounterList (s "counterlist")
       map Home (s "home")
+      map Home top
     ]
 
 
 let urlUpdate (result: Option<Page>) model =
     match result with
     | None ->
-        console.error("Error parsing url")
+        Browser.console.error("Error parsing url: " + Browser.window.location.href)
         model, Navigation.modifyUrl (toHash model.CurrentPage)
 
     | Some page ->

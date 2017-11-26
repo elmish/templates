@@ -3,4 +3,5 @@ Fable.Core
 Fable.Elmish.React
 Fable.Elmish.Browser
 Fable.Elmish.Debugger
+Fable.Elmish.HMR
 dotnet-fable
