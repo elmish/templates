@@ -1,3 +1,11 @@
+### 0.2.4
+
+* Fix mistakes in the README
+* Add VSCode tasks
+* Fix IE11 support
+* Use source-map only during development
+* Update dependencies
+
 ### 0.2.3
 
 * Use Fable.Elmish.HMR 1.0.0
