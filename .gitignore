@@ -32,3 +32,5 @@ samples/react-native/navigation/windows/
 
 *.nupkg
 *.bak
+
+paket-files/

@@ -1,3 +1,7 @@
+### 0.2.5
+
+* Update paket.exe
+
 ### 0.2.4
 
 * Fix mistakes in the README
