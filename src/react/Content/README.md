@@ -27,7 +27,7 @@ In a terminal, run `dotnet new -i Fable.Template.Elmish.React::*` to install or 
 
 ## Creating a new project with the template
 
-In a terminal, run `dotnet fable-elmish-react` to create a project in the current directory. Type `dotnet new fable-elmish-react -n awesome` instead to create a subfolder named `awesome` and put the new project there.
+In a terminal, run `dotnet new fable-elmish-react` to create a project in the current directory. Type `dotnet new fable-elmish-react -n awesome` instead to create a subfolder named `awesome` and put the new project there.
 
 > The project will have the name of the directory. You may get some issues if the directory name contains some special characters like hyphens
 
