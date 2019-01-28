@@ -195,3 +195,6 @@ docs/tools/FSharp.Formatting.svclog
 *.bak
 project.lock.json
 deploy/
+obj
+bin
+out
