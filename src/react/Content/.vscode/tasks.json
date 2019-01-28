@@ -2,7 +2,7 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "0.1.0",
-    "command": "dotnet",
+    "command": "npx",
     "runner": "terminal",
     "args": [],
     "options": {
@@ -11,7 +11,7 @@
     "tasks": [
         {
             "taskName": "Start",
-            "args": ["fable", "yarn-run", "start" ],
+            "args": ["webpack-dev-server" ],
             "isBuildCommand": true,
             "suppressTaskName": true,
             "isBackground": true,
