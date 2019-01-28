@@ -46,11 +46,7 @@ let root model dispatch =
 
   div
     []
-    [ div
-        [ ClassName "navbar-bg" ]
-        [ div
-            [ ClassName "container" ]
-            [ Navbar.View.root ] ]
+    [ Navbar.View.root
       div
         [ ClassName "section" ]
         [ div
@@ -74,7 +70,6 @@ Program.mkProgram init update root
 //-:cnd:noEmit
 #if DEBUG
 |> Program.withDebugger
-|> Program.withHMR
 #endif
 //+:cnd:noEmit
 |> Program.withReact "elmish-app"
