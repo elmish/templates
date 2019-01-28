@@ -4,13 +4,7 @@
 //#else
 1. Install npm dependencies: `npm install`
 //#endif
-2. Install dotnet dependencies: `dotnet restore`
-3. **Move to `src` folder**: `cd src`
-//#if (yarn)
-4. Start Fable server and Webpack dev server: `dotnet fable yarn-start`
-//#else
-4. Start Fable server and Webpack dev server: `dotnet fable npm-start`
-//#endif
-5. In your browser, open: [http://localhost:8080/](http://localhost:8080/)
+2. `npx webpack-dev-server`
+3. In your browser, open: [http://localhost:8080/](http://localhost:8080/)
 
 Any modification you do to the F# code will be reflected in the web page after saving.
