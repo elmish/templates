@@ -38,11 +38,11 @@ let menu currentPage =
 
 let root model dispatch =
 
-  let pageHtml =
-    function
+  let pageHtml page =
+    match page with
     | Page.About -> Info.View.root
-    | Counter -> Counter.View.root model.counter (CounterMsg >> dispatch)
-    | Home -> Home.View.root model.home (HomeMsg >> dispatch)
+    | Counter -> Counter.View.root model.Counter (CounterMsg >> dispatch)
+    | Home -> Home.View.root model.Home (HomeMsg >> dispatch)
 
   div
     []
@@ -55,10 +55,10 @@ let root model dispatch =
                 [ ClassName "columns" ]
                 [ div
                     [ ClassName "column is-3" ]
-                    [ menu model.currentPage ]
+                    [ menu model.CurrentPage ]
                   div
                     [ ClassName "column" ]
-                    [ pageHtml model.currentPage ] ] ] ] ]
+                    [ pageHtml model.CurrentPage ] ] ] ] ]
 
 open Elmish.React
 open Elmish.Debug

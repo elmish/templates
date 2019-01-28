@@ -3,11 +3,10 @@ module App.Types
 open Global
 
 type Msg =
-  | CounterMsg of Counter.Types.Msg
-  | HomeMsg of Home.Types.Msg
+    | CounterMsg of Counter.Types.Msg
+    | HomeMsg of Home.Types.Msg
 
-type Model = {
-    currentPage: Page
-    counter: Counter.Types.Model
-    home: Home.Types.Model
-  }
+type Model =
+    { CurrentPage: Page
+      Counter: Counter.Types.Model
+      Home: Home.Types.Model }
