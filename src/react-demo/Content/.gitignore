@@ -198,3 +198,4 @@ deploy/
 obj
 bin
 out
+.fable

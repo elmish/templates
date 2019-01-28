@@ -1,3 +1,9 @@
+### 0.4.0
+
+* Update dependencies
+* Update to Fable 2.1
+* Fix #3: Fix indentation and uppercase
+
 ### 0.3.5
 
 * Update paket.exe

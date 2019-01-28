@@ -1,3 +1,8 @@
+### 0.3.0
+
+* Update dependencies
+* Update to Fable 2.1
+
 ### 0.2.5
 
 * Update paket.exe

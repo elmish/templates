@@ -8,7 +8,7 @@
     <PackageTags>fable;template;fsharp</PackageTags>
     <NeutralLanguage>en-US</NeutralLanguage>
     <PackageType>Template</PackageType>
-    <Version>0.3.5</Version>
+    <Version>0.4.0</Version>
     <PackProjectInputFile>$(MSBuildProjectFullPath)</PackProjectInputFile>
     <NoBuild>true</NoBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
@@ -22,8 +22,11 @@
         Content/public/bundle.js*;
         Content/bin/**/*;
         Content/obj/**/*;
+        Content/.fable/**/*;
+        Content/deploy/**/*;
         Content/src/bin/**/*;
         Content/src/obj/**/*;
+        Content/src/.fable/**/*;
     </ExcludeFromPackage>
 </PropertyGroup>
   <ItemGroup>
