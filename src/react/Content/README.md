@@ -39,7 +39,7 @@ In a terminal, run `dotnet new fable-elmish-react` to create a project in the cu
     //#else
 -   Install JS dependencies: `npm install`
     //#endif
--   `npx webpack-dev-server` (or `npm start:dev`)
+-   Start webpack development server: `npx webpack-dev-server`
 -   In your browser, open: http://localhost:8080/
 
 If you are using VS Code + [Ionide](http://ionide.io/), you can also use the key combination: Ctrl+Shift+B (Cmd+Shift+B on macOS) instead of typing the `npx webpack-dev-server` command. This also has the advantage that Fable-specific errors will be highlighted in the editor along with other F# errors.
