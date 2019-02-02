@@ -4,10 +4,10 @@
 
 This repository contains the following templates:
 
-| Name  | Short Name | Description  |
-|---|---|---|
-| Fable.Template.Elmish.React | fable-elmish-react | This template will help set up a minimal elmish application to start a new project |
-| Fable.Template.Elmish.React.Demo | fable-elmish-react-demo | This template contains a demo apps (usefull to test or explain elmish) |
+| Name                             | Short Name              | Description                                                                        |
+| -------------------------------- | ----------------------- | ---------------------------------------------------------------------------------- |
+| Fable.Template.Elmish.React      | fable-elmish-react      | This template will help set up a minimal elmish application to start a new project |
+| Fable.Template.Elmish.React.Demo | fable-elmish-react-demo | This template contains a demo apps (usefull to test or explain elmish)             |
 
 ## How to use ?
 
@@ -29,6 +29,7 @@ cd awesome
 ```
 
 ## If you choose to use yarn
+
 ```bash
 # Install yarn dependencies
 yarn install
@@ -37,14 +38,15 @@ cd src
 # Install dotnet dependencies
 dotnet restore
 # Start Fable server and Webpack dev server
-dotnet fable yarn-start
+npx webpack-dev-server
 # In your browser, open: http://localhost:8080/
 ```
 
-Note that yarn may emit a warning ``info fsevents@1.1.2: The platform "win32" is incompatible with this module``.  
+Note that yarn may emit a warning `info fsevents@1.1.2: The platform "win32" is incompatible with this module`.  
 You can safely ignore this.
 
 ## If you choose to use npm
+
 ```bash
 # Install npm dependencies
 npm install
@@ -53,6 +55,6 @@ cd src
 # Install dotnet dependencies
 dotnet restore
 # Start Fable server and Webpack dev server
-dotnet fable npm-start
+npx webpack-dev-server
 # In your browser, open: http://localhost:8080/
 ```
