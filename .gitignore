@@ -34,3 +34,5 @@ samples/react-native/navigation/windows/
 *.bak
 
 paket-files/
+
+.ionide/
