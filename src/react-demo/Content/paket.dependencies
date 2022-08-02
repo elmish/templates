@@ -3,6 +3,7 @@ source https://nuget.org/api/v2
 framework: netcore3.1, netstandard2.0, netstandard2.1
 storage:none
 
+nuget Fable.FontAwesome.Free
 nuget FSharp.Core
 nuget Fable.Core
 nuget Fable.Elmish.React
