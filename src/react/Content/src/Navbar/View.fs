@@ -1,9 +1,10 @@
 module Navbar.View
 
+open Fable.FontAwesome
 open Fable.React
 open Fable.React.Props
 
-let navButton classy href faClass txt =
+let navButton classy href icon txt =
     p
         [ ClassName "control" ]
         [ a
@@ -11,9 +12,7 @@ let navButton classy href faClass txt =
               Href href ]
             [ span
                 [ ClassName "icon" ]
-                [ i
-                    [ ClassName (sprintf "fab %s" faClass) ]
-                    [ ] ]
+                [ Fa.i [ icon ] [] ]
               span
                 [ ]
                 [ str txt ] ] ]
@@ -23,9 +22,9 @@ let navButtons =
         [ ClassName "navbar-item" ]
         [ div
             [ ClassName "field is-grouped" ]
-            [ navButton "twitter" "https://twitter.com/FableCompiler" "fa-twitter" "Twitter"
-              navButton "github" "https://github.com/elmish/elmish" "fa-github" "Fork me"
-              navButton "github" "https://gitter.im/fable-compiler/Fable" "fa-gitter" "Gitter" ] ]
+            [ navButton "twitter" "https://twitter.com/FableCompiler" Fa.Brand.Twitter "Twitter"
+              navButton "github" "https://github.com/elmish/elmish" Fa.Brand.Github "Fork me"
+              navButton "github" "https://gitter.im/fable-compiler/Fable" Fa.Brand.Gitter "Gitter" ] ]
 
 let root =
     nav
