@@ -16,8 +16,10 @@ node_modules/
 *.dll.mdb
 *.exe.mdb
 
-# Build results
+# JetBrains IDEs (e.g. JetBrains Rider)
+.idea/
 
+# Build results
 [Dd]ebug/
 [Rr]elease/
 x64/
