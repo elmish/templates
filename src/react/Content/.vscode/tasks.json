@@ -1,29 +1,20 @@
 {
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
-    "version": "0.1.0",
-    "command": "npx",
-    "runner": "terminal",
-    "args": [],
-    "options": {
-        "cwd": "${workspaceRoot}/src"
-    },
+    "version": "2.0.0",
     "tasks": [
         {
-            "taskName": "Start",
-            "args": ["webpack-dev-server" ],
-            "isBuildCommand": true,
-            "suppressTaskName": true,
+            "label": "Start",
+            "type": "shell",
+            "command": "dotnet",
+            "args": ["fsi", "build.fsx", "--watch"],
             "isBackground": true,
             "problemMatcher": {
                 "fileLocation": "absolute",
                 "background": {
                     "activeOnStart": true,
-                    "beginsPattern":{
-                        "regexp": "webpack: Compiling"
-                    },
-                    "endsPattern":{
-                        "regexp": "webpack: (Compiled successfully|Failed to compile)"
+                    "beginsPattern": {
+                        "regexp": "Started Fable compilation..."
                     }
                 },
                 "pattern": {

@@ -9,7 +9,7 @@ open Types
 open App.State
 open Global
 
-importAll "../sass/main.sass"
+importSideEffects "../sass/main.sass"
 
 open Fable.React
 open Fable.React.Props

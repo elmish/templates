@@ -28,25 +28,10 @@ dotnet new fable-elmish-react -n awesome -lang f#
 cd awesome
 ```
 
-## If you choose to use yarn
+### Maintainers
 
-```bash
-# Install yarn dependencies
-yarn install
-# Start Fable server and Webpack dev server
-npx webpack-dev-server
-# In your browser, open: http://localhost:8080/
-```
+To release a new version:
 
-Note that yarn may emit a warning ``info fsevents@1.1.2: The platform "win32" is incompatible with this module``.
-You can safely ignore this.
-
-## If you choose to use npm
-
-```bash
-# Install npm dependencies
-npm install
-# Start Fable server and Webpack dev server
-npx webpack-dev-server
-# In your browser, open: http://localhost:8080/
-```
+1. Update the Release Notes
+2. Update the version in `src/react/Fable.Template.Elmish.React.proj`
+3. Run `dotnet fsi build.fsx`

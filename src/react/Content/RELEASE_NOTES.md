@@ -1,3 +1,17 @@
+### 0.8.0
+
+* Add the problemMatcher patterns to support Fable 4
+
+### 0.7.0
+
+* Upgrade to Fable 4
+* Upgrade to Fable.Elmish 4
+* Remove yarn support and keep only npm (makes maintenance easier)
+* Use Paket as a dotnet tool
+* Use Fun.Build as the build system
+
+### 0.6.0
+
 ### 0.5.0
 
 * Update dependencies
