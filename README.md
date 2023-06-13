@@ -7,7 +7,6 @@ This repository contains the following templates:
 | Name  | Short Name | Description  |
 |---|---|---|
 | Fable.Template.Elmish.React | fable-elmish-react | This template will help set up a minimal elmish application to start a new project |
-| Fable.Template.Elmish.React.Demo | fable-elmish-react-demo | This template contains a demo apps (usefull to test or explain elmish) |
 
 ## How to use ?
 
