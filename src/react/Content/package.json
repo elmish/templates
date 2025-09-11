@@ -11,9 +11,9 @@
     "remotedev": "^0.2.9"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.0.0",
+    "@vitejs/plugin-react": "^4.7.0",
     "bulma": "^0.9.4",
     "sass": "^1.62.1",
-    "vite": "^4.5.5"
+    "vite": "^7.1.5"
   }
 }
